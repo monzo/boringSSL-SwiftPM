@@ -4,17 +4,17 @@
 import PackageDescription
 
 let package = Package(
-  name: "BoringSSL-GRPC",
+  name: "NearbySSL",
   products: [
     .library(
-      name: "openssl_grpc",
-      targets: ["openssl_grpc"]
+      name: "NearbySSL",
+      targets: ["NearbySSL"]
     )
   ],
 
   targets: [
     .target(
-      name: "openssl_grpc",
+      name: "NearbySSL",
       path: ".",
       exclude: [
         ".git/",
@@ -3400,7 +3400,7 @@ let package = Package(
     .testTarget(
       name: "build-test",
       dependencies: [
-        "openssl_grpc",
+        "NearbySSL",
       ],
       path: "SwiftPMTests/build-test"
     ),
